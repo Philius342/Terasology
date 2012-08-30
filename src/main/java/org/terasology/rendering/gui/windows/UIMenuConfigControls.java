@@ -430,16 +430,17 @@ public class UIMenuConfigControls extends UIWindow {
     public boolean processMouseInput(int button, boolean state, int wheelMoved, boolean consumed) {
         if (editButton != null) {
             int key = -1;
-            if (button == 0)
+            if (button == 0) {
                 key = 256;
-            else if (button == 1)
+            } else if (button == 1) {
                 key = 257;
-            else if (button == 2)
+            } else if (button == 2) {
                 key = 258;
-            else if (wheelMoved > 0)
+            } else if (wheelMoved > 0) {
                 key = 259;
-            else if (wheelMoved < 0)
+            } else if (wheelMoved < 0) {
                 key = 260;
+            }
             
             if (key != -1) {
                 changeButton(editButton, key);
@@ -453,59 +454,59 @@ public class UIMenuConfigControls extends UIWindow {
     }
     
     private void changeButton(UIButton button, int key) {
-        if (button == ForwardButton)
+        if (button == ForwardButton) {
             InputConfig.getInstance().setKeyForward(key);
-        else if (button == BackwardButton)
+        } else if (button == BackwardButton) {
             InputConfig.getInstance().setKeyBackward(key);
-        else if (button == RightButton)
+        } else if (button == RightButton) {
             InputConfig.getInstance().setKeyRight(key);
-        else if (button == LeftButton)
+        } else if (button == LeftButton) {
             InputConfig.getInstance().setKeyLeft(key);
-        else if (button == AttackButton)
+        } else if (button == AttackButton) {
             InputConfig.getInstance().setKeyAttack(key);
-        else if (button == ConsoleButton)
+        } else if (button == ConsoleButton) {
             InputConfig.getInstance().setKeyConsole(key);
-        else if (button == CrouchButton)
+        } else if (button == CrouchButton) {
             InputConfig.getInstance().setKeyCrouch(key);
-        else if (button == ActivateButton)
+        } else if (button == ActivateButton) {
             InputConfig.getInstance().setKeyForward(key);
-        else if (button == HideguiButton)
+        } else if (button == HideguiButton) {
             InputConfig.getInstance().setKeyHidegui(key);
-        else if (button == InventoryButton)
+        } else if (button == InventoryButton) {
             InputConfig.getInstance().setKeyInventory(key);
-        else if (button == JumpButton)
+        } else if (button == JumpButton) {
             InputConfig.getInstance().setKeyJump(key);
-        else if (button == MinionmodeButton)
+        } else if (button == MinionmodeButton) {
             InputConfig.getInstance().setKeyMinionmode(key);
-        else if (button == PauseButton)
+        } else if (button == PauseButton) {
             InputConfig.getInstance().setKeyPause(key);
-        else if (button == RunButton)
+        } else if (button == RunButton) {
             InputConfig.getInstance().setKeyRun(key);
-        else if (button == ToolnextButton)
+        } else if (button == ToolnextButton) {
             InputConfig.getInstance().setKeyToolnext(key);
-        else if (button == ToolprevButton)
+        } else if (button == ToolprevButton) {
             InputConfig.getInstance().setKeyToolprev(key);
-        else if (button == Toolslot1Button)
+        } else if (button == Toolslot1Button) {
             InputConfig.getInstance().setKeyToolslot1(key);
-        else if (button == Toolslot2Button)
+        } else if (button == Toolslot2Button) {
             InputConfig.getInstance().setKeyToolslot2(key);
-        else if (button == Toolslot3Button)
+        } else if (button == Toolslot3Button) {
             InputConfig.getInstance().setKeyToolslot3(key);
-        else if (button == Toolslot4Button)
+        } else if (button == Toolslot4Button) {
             InputConfig.getInstance().setKeyToolslot4(key);
-        else if (button == Toolslot5Button)
+        } else if (button == Toolslot5Button) {
             InputConfig.getInstance().setKeyToolslot5(key);
-        else if (button == Toolslot6Button)
+        } else if (button == Toolslot6Button) {
             InputConfig.getInstance().setKeyToolslot6(key);
-        else if (button == Toolslot7Button)
+        } else if (button == Toolslot7Button) {
             InputConfig.getInstance().setKeyToolslot7(key);
-        else if (button == Toolslot8Button)
+        } else if (button == Toolslot8Button) {
             InputConfig.getInstance().setKeyToolslot8(key);
-        else if (button == Toolslot9Button)
+        } else if (button == Toolslot9Button) {
             InputConfig.getInstance().setKeyToolslot9(key);
-        else if (button == UsehelditemButton)
+        } else if (button == UsehelditemButton) {
             InputConfig.getInstance().setKeyUsehelditem(key);
-        else {
+        } else {
             editButton.getLabel().setText(editButtonCurrent);
             return;
         }
